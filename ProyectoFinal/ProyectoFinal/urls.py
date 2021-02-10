@@ -20,5 +20,10 @@ from miapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index, name = "index"),
+    path('listar_cursos', views.listar_cursos, name="listar_cursos"),
+    path('eliminar_curso/<int:id>',views.eliminar_curso, name="eliminar_curso"),
+    path('save_curso/',views.save_curso, name="save_curso"),
+    path('crear_curso/',views.crear_curso, name="crear_curso"),
+    
     
 ]
