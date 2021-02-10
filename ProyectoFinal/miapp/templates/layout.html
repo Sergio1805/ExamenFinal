@@ -1,0 +1,61 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %} {% endblock title %} | Gerardo Castillo
+    </title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Style.css' %}">
+
+</head>
+
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/LogoDJango.png' %}" />
+            <h1>
+                Examen Final LP3
+            </h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="">Listar Cursos</a>
+
+            </li>
+            <li>
+                <a href="">Crear curso</a>
+            </li>
+            <li>
+                <a href="">Listar Carreras</a>
+            </li>
+            <li>
+                <a href="">Crear Carrera</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+            <strong> 
+                       Contenido por defecto desde layout.html  
+                    </strong> {% endblock content %}
+        </div>
+    </div>
+    <footer>
+        UNTELS - Lenguaje de Programación III &copy; Gerardo Castillo {% now "d/m/y h:m:s" %}
+    </footer>
+</body>
+
+</html>
